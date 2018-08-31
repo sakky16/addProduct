@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.saikat.com.addproductapp.activity.ViewProductActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_setting"
+        android:background="@color/darkBlue"
+        android:gravity="center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30sp"
+                android:id="@+id/back_iv"
+                android:src="@drawable/left_arrow"
+                android:layout_height="30sp" />
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Product"
+               android:layout_centerHorizontal="true"
+                android:textColor="@color/White"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="No Product Found"
+        android:textSize="18sp"
+        android:id="@+id/no_product_tv"
+        android:visibility="gone"
+        android:textColor="@color/Black"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/prod_rv"
+        android:layout_above="@+id/progress_bar"
+        android:layout_below="@+id/toolbar_setting"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>
